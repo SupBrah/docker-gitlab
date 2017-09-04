@@ -155,6 +155,8 @@ Generate random strings that are at least `64` characters long for each of `GITL
 - `GITLAB_SECRETS_DB_KEY_BASE` is used to encrypt CI secret variables, as well as import credentials, in the database. If you lose or rotate this secret, you will not be able to use existing CI secrets.
 - `GITLAB_SECRETS_SECRET_KEY_BASE` is used for password reset links, and other 'standard' auth features. If you lose or rotate this secret, password reset tokens in emails will reset.
 
+> **Tip**: Source the `keys.sh` file the populate these env vars.
+
 > **Tip**: You can generate a random string using `pwgen -Bsv1 64` and assign it as the value of `GITLAB_SECRETS_DB_KEY_BASE`.
 
 Start GitLab using:
